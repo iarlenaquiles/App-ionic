@@ -26,8 +26,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     UsuarioProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

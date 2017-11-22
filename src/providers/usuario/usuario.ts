@@ -16,11 +16,11 @@ export class UsuarioProvider {
   constructor(public http: HttpClient) {
     console.log('Hello UsuarioProvider Provider');
   }
-  public findAll():Observable<any>{
+  public findAll(): Observable<any> {
     return this.http.get(this.urlUsuario);
   }
 
-  public salvar(usuario):Observable<any>{
+  public salvar(usuario): Observable<any> {
     return this.http.post(this.urlUsuario, usuario);
   }
 }

@@ -1,25 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Aula 6 
+      Aula 6
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <form (ngSubmit)="salvarUsuario()">
-        <ion-item>
-          <ion-label>Nome</ion-label>
-          <ion-input type="text" [(ngModel)]="usuarioCadastro.nome" name="nome"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Idade</ion-label>
-          <ion-input type="text" [(ngModel)]="usuarioCadastro.idade" name="idade"></ion-input>
-        </ion-item>
-        <button ion-button type="submit" block>Salvar</button>
-      </form>
+  <form (ngSubmit)="salvarUsuario()">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="usuarioCadastro.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Idade</ion-label>
+      <ion-input type="text" [(ngModel)]="usuarioCadastro.idade" name="idade"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Salvar</button>
+  </form>
 
   <ion-list *ngFor="let usuario of usuarios">
-  	<ion-item>{{usuario.nome}} - {{usuario.idade}}</ion-item>
+    <ion-item>{{usuario.nome}} - {{usuario.idade}}</ion-item>
   </ion-list>
 </ion-content>
