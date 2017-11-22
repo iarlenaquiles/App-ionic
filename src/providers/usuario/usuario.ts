@@ -25,6 +25,10 @@ export class UsuarioProvider {
   }
 
   public editar(usuario): Observable<any> {
-    return this.http.post(this.urlUsuario + "/" + usuario._id, usuario);
+    return this.http.put(this.urlUsuario + "/" + usuario._id, usuario);
+  }
+
+  public deletar(id) {
+    this.http.delete(this.urlUsuario + "/" + id);
   }
 }
