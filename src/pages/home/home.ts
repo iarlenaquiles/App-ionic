@@ -21,6 +21,7 @@ public usuarioCadastro = {"nome":"", idade:null};
 
   public salvarUsuario(){
     this.usuarioService.salvar(this.usuarioCadastro).subscribe(response => this.getUsuarios());
+    this.usuarioCadastro={"nome": "", idade: null};
   }
 
 }
