@@ -24,7 +24,7 @@ export class HomePage {
   public salvarUsuario() {
     if (this.usuarioCadastro._id == "") {
       this.usuarioService.salvar(this.usuarioCadastro).subscribe(response => this.getUsuarios());
-    }else{
+    } else {
       this.usuarioService.editar(this.usuarioCadastro).subscribe(response => this.getUsuarios());
     }
 
@@ -33,6 +33,10 @@ export class HomePage {
 
   public editarForm(usuario) {
     this.usuarioCadastro = usuario;
+  }
+
+  public deletar(id) {
+    this.usuarioService.deletar(id).subscribe(response => this.getUsuarios());
   }
 
 }
