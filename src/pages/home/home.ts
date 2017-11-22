@@ -24,4 +24,8 @@ export class HomePage {
     this.usuarioCadastro = { "nome": "", idade: null };
   }
 
+  public editarForm(usuario){
+    this.usuarioCadastro = usuario;
+  }
+
 }
