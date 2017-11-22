@@ -21,8 +21,10 @@
 
   <ion-list *ngFor="let usuario of usuarios">
     <ion-item>{{usuario.nome}} - {{usuario.idade}}
-      <button (click)="editarForm(usuario)" ion-button color="light">Editar</button>
-      <button (click)="deletar(usuario._id)" ion-button color="danger">Deletar</button>
+      <div item-right>
+        <button (click)="editarForm(usuario)" ion-button color="light">Editar</button>
+        <button (click)="deletar(usuario._id)" ion-button color="danger">Deletar</button>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>
