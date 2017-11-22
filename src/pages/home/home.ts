@@ -10,7 +10,9 @@ import { UsuarioProvider } from '../../providers/usuario/usuario';
 export class HomePage {
 
   public usuarios = [];
-  public usuarioCadastro = { "nome": "", idade: null };
+  public usuarioCadastro = {
+    "_id": "", "nome": "", idade: null
+  };
   constructor(public navCtrl: NavController, private usuarioService: UsuarioProvider) {
     this.getUsuarios();
   }
@@ -20,11 +22,13 @@ export class HomePage {
   }
 
   public salvarUsuario() {
-    this.usuarioService.salvar(this.usuarioCadastro).subscribe(response => this.getUsuarios());
-    this.usuarioCadastro = { "nome": "", idade: null };
+    if (this.usuarioCadastro._id == "") {
+      this.usuarioService.salvar(this.usuarioCadastro).subscribe(response => this.getUsuarios());
+      this.usuarioCadastro = { "_id": null, "nome": "", idade: null };
+    }
   }
 
-  public editarForm(usuario){
+  public editarForm(usuario) {
     this.usuarioCadastro = usuario;
   }
 
