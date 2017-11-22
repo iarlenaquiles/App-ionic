@@ -28,7 +28,7 @@ export class UsuarioProvider {
     return this.http.put(this.urlUsuario + "/" + usuario._id, usuario);
   }
 
-  public deletar(id) {
-    this.http.delete(this.urlUsuario + "/" + id);
+  public deletar(id): Observable<any> {
+    return this.http.delete(this.urlUsuario + "/" + id);
   }
 }
