@@ -23,4 +23,8 @@ export class UsuarioProvider {
   public salvar(usuario): Observable<any> {
     return this.http.post(this.urlUsuario, usuario);
   }
+
+  public editar(usuario): Observable<any> {
+    return this.http.post(this.urlUsuario + "/" + usuario._id, usuario);
+  }
 }
